@@ -18,12 +18,10 @@ Lista *cria_lista()
     return l;
 }
 
-void insere_lista(Lista *lista, void *data)
-{
+void insere_lista(Lista *lista, void *data) {
     Nodo *n = cria_nodo(data);
-    if (!n)
-        return;
-    n->next = lista->inicio;
+    if(!n) return;
+    set_next(n, lista->inicio);
     lista->inicio = n;
     lista->quantidade++;
 }
