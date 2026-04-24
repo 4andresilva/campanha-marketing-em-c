@@ -67,6 +67,8 @@ Estrutura *cria_estrutura()
 
 void insere_cliente(Estrutura *e, int criterio, Cliente *c)
 {
+    if(!e || !c) return;
+
     int idx;
     switch (criterio)
     {
@@ -94,6 +96,8 @@ void insere_cliente(Estrutura *e, int criterio, Cliente *c)
 
 Lista *recupera_cliente(Estrutura *e, int criterio, int complemento, char *busca)
 {
+    if(!e) return NULL;
+    
     int idx;
     switch (criterio)
     {

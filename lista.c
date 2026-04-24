@@ -31,6 +31,8 @@ int get_quantidade(Lista *lista) { return lista ? lista->quantidade : 0; }
 
 void libera_lista(Lista *lista)
 {
+    if(!lista) return;
+    
     Nodo *cur = lista->inicio;
     while (cur)
     {

@@ -18,6 +18,6 @@ Nodo *cria_nodo(void *data)
     return n;
 }
 
-void *get_data(Nodo *n) { return n->data; }
-Nodo *get_next(Nodo *n) { return n->next; }
-void set_next(Nodo *n, Nodo *next) { n->next = next; }
+void* get_data(Nodo *n) { if(!n) return NULL; return n->data; }
+Nodo* get_next(Nodo *n) { if(!n) return NULL; return n->next; }
+void  set_next(Nodo *n, Nodo *next) { if(!n) return; n->next = next; }
